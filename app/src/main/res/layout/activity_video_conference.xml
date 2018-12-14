@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.VideoConferenceActivity">
+
+    <FrameLayout
+        android:id="@+id/participant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/dummyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Please wait till other participant join"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/audioonlyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Audio Only"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/moderator"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/frame_border"
+            android:padding="5dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/horizontalRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+        <RelativeLayout
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/disconnect"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/disconnect" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/disconnect"
+                android:background="@drawable/transparent_bg">
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/mute"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/unmute" />
+
+                    <ImageView
+                        android:id="@+id/video"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/video_visible" />
+
+                    <ImageView
+                        android:id="@+id/camera"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/camera" />
+
+                    <ImageView
+                        android:id="@+id/volume"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/volume_on" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
