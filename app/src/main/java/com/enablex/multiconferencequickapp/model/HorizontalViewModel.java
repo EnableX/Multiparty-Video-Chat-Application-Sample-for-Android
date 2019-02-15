@@ -1,7 +1,7 @@
 package com.enablex.multiconferencequickapp.model;
 
-import enxrtcandroid.Controller.EnxPlayerView;
-import enxrtcandroid.Controller.EnxStream;
+import enx_rtc_android.Controller.EnxPlayerView;
+import enx_rtc_android.Controller.EnxStream;
 
 public class HorizontalViewModel {
     private EnxStream enxStream;

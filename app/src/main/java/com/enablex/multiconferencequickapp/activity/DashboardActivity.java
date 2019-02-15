@@ -58,11 +58,11 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         {
             case R.id.createRoom:
 
-                new WebCall(this, this, null, WebConstants.getRoomId, WebConstants.getRoomIdCode, false,true).execute();
+                new WebCall(this, this, null, WebConstants.getRoomId, WebConstants.getRoomIdCode, false, true).execute();
 
                 break;
             case R.id.joinRoom:
-                room_Id=roomId.getText().toString();
+                room_Id = roomId.getText().toString();
                 if (validations())
                 {
                     validateRoomIDWebCall();
@@ -88,7 +88,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     private void validateRoomIDWebCall()
     {
-        new WebCall(this, this, null, WebConstants.validateRoomId + room_Id, WebConstants.validateRoomIdCode, true,false).execute();
+        new WebCall(this, this, null, WebConstants.validateRoomId + room_Id, WebConstants.validateRoomIdCode, true, false).execute();
     }
 
     @Override
@@ -246,12 +246,17 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     {
         createRoom.setOnClickListener(this);
         joinRoom.setOnClickListener(this);
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if(i == 0){
+            public void onCheckedChanged(RadioGroup radioGroup, int i)
+            {
+                if (i == 0)
+                {
                     role = "moderator";
-                }else{
+                }
+                else
+                {
                     role = "participant";
                 }
             }
@@ -346,7 +351,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         }
         if (!name.getText().toString().isEmpty() && !roomId.getText().toString().isEmpty())
         {
-            new WebCall(this, this, jsonObject, WebConstants.getTokenURL, WebConstants.getTokenURLCode, false,false).execute();
+            new WebCall(this, this, jsonObject, WebConstants.getTokenURL, WebConstants.getTokenURLCode, false, false).execute();
         }
     }
 

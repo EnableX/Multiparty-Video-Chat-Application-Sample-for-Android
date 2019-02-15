@@ -7,7 +7,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
@@ -37,11 +37,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'org.webrtc:google-webrtc:1.0.25331'
+    implementation 'org.webrtc:google-webrtc:1.0.22672'
     implementation('io.socket:socket.io-client:1.0.0') {
         // excluding org.json which is provided by Android
         exclude group: 'org.json', module: 'json'
     }
     implementation 'com.google.code.gson:gson:2.8.5'
-    implementation(name: 'EnxRtcAndroid-release_0.9.1', ext: 'aar')
+    implementation(name: 'EnxRtcAndroid-release_1.2', ext: 'aar')
 }

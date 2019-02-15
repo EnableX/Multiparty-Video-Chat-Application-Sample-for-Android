@@ -18,8 +18,8 @@ import org.json.JSONObject;
 
 import java.util.List;
 
-import enxrtcandroid.Controller.EnxPlayerView;
-import enxrtcandroid.Controller.EnxStream;
+import enx_rtc_android.Controller.EnxPlayerView;
+import enx_rtc_android.Controller.EnxStream;
 
 
 public class HorizontalViewAdapter extends RecyclerView.Adapter<HorizontalViewAdapter.MessageViewHolder> {
@@ -61,7 +61,7 @@ public class HorizontalViewAdapter extends RecyclerView.Adapter<HorizontalViewAd
             if (enxStream == null) {
                 return;
             }
-            boolean mScreen = enxStream.mScreen;
+            boolean mScreen = enxStream.hasScreen();
             EnxPlayerView enxPlayerView = streamArrayList.get(position).getEnxPlayerView();
             enxPlayerView.setId(Integer.valueOf(enxStream.getId()));
             if (mScreen) {
