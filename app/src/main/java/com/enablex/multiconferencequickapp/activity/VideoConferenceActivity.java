@@ -367,6 +367,31 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
         });
     }
 
+    @Override
+    public void onNotifyDeviceUpdate(String s) {
+
+    }
+
+    @Override
+    public void onCanvasStarted(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onCanvasStopped(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onDeviceAdded(String s) {
+
+    }
+
+    @Override
+    public void onDeviceRemoved(String s) {
+
+    }
+
     private boolean getAudioOnly(String str) {
         if (str.equalsIgnoreCase("audio") || str.equalsIgnoreCase("audioOnly")) {
             return true;
