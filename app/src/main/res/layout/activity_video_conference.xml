@@ -94,7 +94,7 @@
                         android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:tint="@color/white"
-                        app:srcCompat="@drawable/video_visible" />
+                        app:srcCompat="@drawable/ic_videocam" />
 
                     <ImageView
                         android:id="@+id/camera"
