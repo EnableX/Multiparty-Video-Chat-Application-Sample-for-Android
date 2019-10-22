@@ -3,8 +3,8 @@ package com.enablex.multiconferencequickapp.web_communication;
 public class WebConstants {
 
     public static final String kBaseURL = "Enter Your Sever URL";
-    public static final String userName = "demo";
-    public static final String password = "enablex";
+    public static final String userName = "USERNAME";
+    public static final String password = "PASSWORD";
     public static final String getRoomId = "createRoom/";
     public static final int getRoomIdCode = 1;
     public static final String validateRoomId = "getRoom/";
