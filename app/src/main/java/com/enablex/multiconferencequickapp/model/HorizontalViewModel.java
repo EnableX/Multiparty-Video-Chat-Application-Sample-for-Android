@@ -17,22 +17,6 @@ public class HorizontalViewModel {
         this.enxStream = enxStream;
     }
 
-    public boolean isAudioOnly() {
-        return isAudioOnly;
-    }
-
-    public void setAudioOnly(boolean audioOnly) {
-        isAudioOnly = audioOnly;
-    }
-
-    public String getMediaType() {
-        return mediaType;
-    }
-
-    public void setMediaType(String mediaType) {
-        this.mediaType = mediaType;
-    }
-
     public EnxPlayerView getEnxPlayerView() {
         return enxPlayerView;
     }

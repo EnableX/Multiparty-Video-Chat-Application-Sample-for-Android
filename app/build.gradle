@@ -7,7 +7,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
@@ -41,6 +41,6 @@ dependencies {
     api('io.socket:socket.io-client:1.0.0') {
         exclude group: 'org.json', module: 'json'
     }
-    implementation(name: 'Enx-Rtc-Android-release-1.5', ext: 'aar')
+    implementation(name: 'EnxRtcAndroid-release_1.5.3', ext: 'aar')
     implementation 'com.google.code.gson:gson:2.8.5'
 }

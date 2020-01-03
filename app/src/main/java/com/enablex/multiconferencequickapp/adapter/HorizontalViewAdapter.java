@@ -54,7 +54,7 @@ public class HorizontalViewAdapter extends RecyclerView.Adapter<HorizontalViewAd
     @Override
     public void onBindViewHolder(final MessageViewHolder holder, final int position) {
         final EnxStream enxStream = streamArrayList.get(position).getEnxStream();
-        final boolean isAudioOnly = streamArrayList.get(position).isAudioOnly();
+        final boolean isAudioOnly = streamArrayList.get(position).getEnxStream().isAudioOnlyStream();
         MessageViewHolder messageViewHolder = (MessageViewHolder) holder;
 
         try {
@@ -72,13 +72,7 @@ public class HorizontalViewAdapter extends RecyclerView.Adapter<HorizontalViewAd
                 enxPlayerView.setTag("not_screen");
             }
 
-            JSONObject jsonObject = enxStream.getAttributes();
-            String name = null;
-            try {
-                name = jsonObject.getString("name");
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            String name = enxStream.getName();
 
             int count = messageViewHolder.relativeLayout.getChildCount();
             if (count > 0) {

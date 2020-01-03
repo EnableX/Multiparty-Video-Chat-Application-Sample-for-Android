@@ -296,19 +296,12 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonStreamid = jsonArray.getJSONObject(i);
                 String strteamID = jsonStreamid.getString("streamId");
-                String stremName = jsonStreamid.getString("name");
-                String mediatype = jsonStreamid.getString("mediatype");
                 EnxStream stream = map.get(strteamID);
-                JSONObject attributes = stream.getAttributes();
-                attributes.put("name", stremName);
-                attributes.put("actualName", stremName);
 
                 HorizontalViewModel horizontalRecyclerViewModel = new HorizontalViewModel();
                 EnxPlayerView remotePlayer = new EnxPlayerView(VideoConferenceActivity.this, EnxPlayerView.ScalingType.SCALE_ASPECT_BALANCED, true);
                 horizontalRecyclerViewModel.setEnxStream(stream);
                 horizontalRecyclerViewModel.setEnxPlayerView(remotePlayer);
-                horizontalRecyclerViewModel.setMediaType(mediatype);
-                horizontalRecyclerViewModel.setAudioOnly(getAudioOnly(mediatype));
                 list.add(horizontalRecyclerViewModel);
 
                 if (i == 0) {
@@ -321,10 +314,10 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
                     if (stream.getMedia() != null) {
                         stream.attachRenderer(activePlayerView);
                     } else {
-                        Toast.makeText(VideoConferenceActivity.this, stremName + "null", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(VideoConferenceActivity.this, stream.getName() + "null", Toast.LENGTH_SHORT).show();
                     }
-                    actionBar.setTitle(stremName);
-                    if (getAudioOnly(mediatype)) {
+                    actionBar.setTitle(stream.getName());
+                    if (stream.isAudioOnlyStream()) {
                         audioOnlyText.setVisibility(View.VISIBLE);
                         View temp1 = participant.getChildAt(0);
                         participant.removeView(temp1);
@@ -370,8 +363,14 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
     }
 
     @Override
-    public void onReceivedChatDataAtRoom(JSONObject jsonObject) {
+    public void onMessageReceived(JSONObject jsonObject) {
 // received when chat data received at room
+    }
+
+
+    @Override
+    public void onUserDataReceived(JSONObject jsonObject) {
+// received when custom data received at room
     }
 
     @Override

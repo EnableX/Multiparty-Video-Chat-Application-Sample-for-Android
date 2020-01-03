@@ -11,7 +11,7 @@ public class ApplicationController extends Application implements Application.Ac
     public static Context context;
 
     public static SharedPreferences getSharedPrefs() {
-        return context.getSharedPreferences("APP_PREF", MODE_PRIVATE);
+        return context.getSharedPreferences("APP_PREF_MULTIPARTY", MODE_PRIVATE);
     }
 
     @Override
