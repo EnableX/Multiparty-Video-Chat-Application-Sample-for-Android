@@ -383,6 +383,26 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
 // received when user role changed successfully
     }
 
+    @Override
+    public void onConferencessExtended(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onConferenceRemainingDuration(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onAckDropUser(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onAckDestroy(JSONObject jsonObject) {
+
+    }
+
     private boolean getAudioOnly(String str) {
         if (str.equalsIgnoreCase("audio") || str.equalsIgnoreCase("audioOnly")) {
             return true;

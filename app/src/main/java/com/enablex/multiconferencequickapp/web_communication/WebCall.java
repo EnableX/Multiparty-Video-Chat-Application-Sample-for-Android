@@ -80,11 +80,10 @@ public class WebCall extends AsyncTask<Void, Void, String> {
             httpURLConnection.setReadTimeout(60000);
             httpURLConnection.setConnectTimeout(60000);
             httpURLConnection.setRequestMethod("GET");
-            if (isAuthenticated) {
-                String text = WebConstants.userName + ":" + WebConstants.password;
-                byte[] data = text.getBytes("UTF-8");
-                String base64 = Base64.encodeToString(data, Base64.DEFAULT).replace("\n", "");
-                httpURLConnection.setRequestProperty("Authorization", "Basic " + base64);
+
+            if(WebConstants.kTry){
+                httpURLConnection.setRequestProperty("x-app-id", WebConstants.kAppId);
+                httpURLConnection.setRequestProperty("x-app-key", WebConstants.kAppkey);
             }
             httpURLConnection.setRequestProperty("Content-Type", "application/json");
             httpURLConnection.connect();
@@ -143,13 +142,11 @@ public class WebCall extends AsyncTask<Void, Void, String> {
             httpURLConnection.setRequestMethod("POST");
             httpURLConnection.setDoInput(true);
             httpURLConnection.setDoOutput(true);
-            if (isAuthenticated) {
-                String text = WebConstants.userName + ":" + WebConstants.password;
-                byte[] data = text.getBytes("UTF-8");
-                String base64 = Base64.encodeToString(data, Base64.DEFAULT).replace("\n", "");
-                httpURLConnection.setRequestProperty("Authorization", "Basic " + base64);
-            }
             httpURLConnection.setRequestProperty("Content-Type", "application/json");
+            if(WebConstants.kTry){
+                httpURLConnection.setRequestProperty("x-app-id", WebConstants.kAppId);
+                httpURLConnection.setRequestProperty("x-app-key", WebConstants.kAppkey);
+            }
             httpURLConnection.connect();
             OutputStream os = httpURLConnection.getOutputStream();
             if (object != null) {
