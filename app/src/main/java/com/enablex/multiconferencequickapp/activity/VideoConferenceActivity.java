@@ -40,6 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import enx_rtc_android.Controller.EnxActiveTalkerViewObserver;
 import enx_rtc_android.Controller.EnxPlayerView;
 import enx_rtc_android.Controller.EnxReconnectObserver;
 import enx_rtc_android.Controller.EnxRoom;
@@ -48,7 +49,7 @@ import enx_rtc_android.Controller.EnxRtc;
 import enx_rtc_android.Controller.EnxStream;
 import enx_rtc_android.Controller.EnxStreamObserver;
 
-public class VideoConferenceActivity extends AppCompatActivity implements EnxRoomObserver, EnxStreamObserver, View.OnClickListener, EnxReconnectObserver {
+public class VideoConferenceActivity extends AppCompatActivity implements EnxRoomObserver, EnxStreamObserver, View.OnClickListener, EnxReconnectObserver, EnxActiveTalkerViewObserver {
     EnxRtc enxRtc;
     String token;
     String name;
@@ -195,6 +196,7 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
         if (enxRooms != null) {
             enxRooms.publish(localStream);
             enxRooms.setReconnectObserver(this);
+            enxRoom.setActiveTalkerViewObserver(this::onActiveTalkerList);
         }
     }
 
@@ -259,9 +261,9 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
     EnxPlayerView activePlayerView;
 
     @Override
-    public void onActiveTalkerList(JSONObject jsonObject) {
+    public void onActiveTalkerList(JSONObject jsonObject) {  // Depricated
 //received when Active talker update happens
-        try {
+       /* try {
             if (list != null) {
                 for (int i = 0; i < list.size(); i++) {
                     EnxPlayerView playerView = list.get(i).getEnxPlayerView();
@@ -338,7 +340,54 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
 
         } catch (Exception e) {
             e.printStackTrace();
+        }*/
+    }
+
+    RecyclerView mRecyclerView;
+
+    boolean touch = false;
+
+    @Override
+    public void onActiveTalkerList(RecyclerView recyclerView) {
+
+        mRecyclerView = recyclerView;
+        if (recyclerView == null) {
+            participant.removeAllViews();
+            dummyText.setVisibility(View.VISIBLE);
+
+        } else {
+            dummyText.setVisibility(View.GONE);
+            participant.removeAllViews();
+            participant.addView(recyclerView);
+
         }
+
+        if (touch) {
+            return;
+        }
+        if (mRecyclerView != null) {
+            touch = true;
+            mRecyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
+                @Override
+                public boolean onInterceptTouchEvent(@NonNull RecyclerView recyclerView, @NonNull MotionEvent motionEvent) {
+                    if (motionEvent.getAction() == 1) {
+                        handleTouchListner();
+                    }
+                    return false;
+                }
+
+                @Override
+                public void onTouchEvent(@NonNull RecyclerView recyclerView, @NonNull MotionEvent motionEvent) {
+
+                }
+
+                @Override
+                public void onRequestDisallowInterceptTouchEvent(boolean b) {
+
+                }
+            });
+        }
+
     }
 
     @Override
@@ -620,9 +669,24 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
     public JSONObject getReconnectInfo() {
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("allow_reconnect", true);
-            jsonObject.put("number_of_attempts", 3);
-            jsonObject.put("timeout_interval", 15);
+            jsonObject.put("allow_reconnect",true);
+            jsonObject.put("number_of_attempts",3);
+            jsonObject.put("timeout_interval",15);
+            jsonObject.put("activeviews","view");//view
+
+            JSONObject object = new JSONObject();
+            object.put("audiomute",true);
+            object.put("videomute",true);
+            object.put("bandwidth",true);
+            object.put("screenshot",true);
+            object.put("avatar",true);
+
+            object.put("iconColor", getResources().getColor(R.color.colorPrimary));
+            object.put("iconHeight",30);
+            object.put("iconWidth",30);
+            object.put("avatarHeight",200);
+            object.put("avatarWidth",200);
+            jsonObject.put("playerConfiguration",object);
         } catch (Exception e) {
             e.printStackTrace();
         }
