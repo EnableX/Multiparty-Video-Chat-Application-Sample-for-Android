@@ -203,7 +203,7 @@ public class WebCall extends AsyncTask<Void, Void, String> {
                 dialog.dismiss();
             }
             if (response == null) {
-                Toast.makeText(context, "Unable to connect to internet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
             } else {
                 Log.d(TAG, response);
                 if (!response.isEmpty()) {
