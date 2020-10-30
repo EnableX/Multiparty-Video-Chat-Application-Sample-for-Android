@@ -97,4 +97,6 @@ This Sample Applcation uses EnableX Android Toolkit to communicate with EnableX 
 
 EnableX provides hosted Vemo Application of different use-case for you to try out.
 
-Sign up for a free trial https://portal.enablex.io/cpaas/trial-sign-up/ or try our multiparty video chat https://try.enablex.io/.
+Try a quick Video Call: https://demo.enablex.io/
+Sign up for a free trial https://portal.enablex.io/cpaas/trial-sign-up/
+
