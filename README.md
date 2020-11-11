@@ -73,7 +73,7 @@ Note:- If you used any emulator/simulator your local stream will not create. It 
 
 You may need to setup your own Application Server after you tried the Sample Application with EnableX hosted Server. We have differnt variant of Appliciation Server Sample Code, pick one in your preferred language and follow instructions given in respective README.md file.
 
-* NodeJS: [https://github.com/EnableX/Video-Conferencing-Open-Source-Web-Application-Sample.git]
+* NodeJS: [https://github.com/EnableX/Video-Conferencing-Open-Source-Web-Application-Sample]
 * PHP: [https://github.com/EnableX/Group-Video-Call-Conferencing-Sample-Application-in-PHP]
 
 Note the following:
@@ -82,15 +82,15 @@ Note the following:
 * Application Server is created using EnableX Server API, a Rest API Service helps in provisioning, session access and pos-session reporting.  
 
 To know more about Server API, go to:
-https://developer.enablex.io/latest/server-api/
+https://developer.enablex.io/video-api/server-api/
 
 
 ## 3 Android Toolkit
 
 This Sample Applcation uses EnableX Android Toolkit to communicate with EnableX Servers to initiate and manage Real Time Communications. You might need to update your Application with latest version of EnableX Android Toolkit time as and when a new release is avaialble.   
 
-* Documentation: https://developer.enablex.io/latest/client-api/android-toolkit/
-* Download Toolkit: https://developer.enablex.io/resources/downloads/#android-toolkit
+* Documentation: https://developer.enablex.io/video-api/client-api/android-toolkit/
+* Download Toolkit: https://developer.enablex.io/video/downloads/#android-toolkit
 
 
 ## 4 Trial
