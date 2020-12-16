@@ -6,13 +6,15 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
@@ -38,7 +40,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import enx_rtc_android.Controller.EnxActiveTalkerViewObserver;
 import enx_rtc_android.Controller.EnxPlayerView;
@@ -77,6 +78,9 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
     RelativeLayout bottomView;
     boolean touchView;
     ProgressDialog progressDialog;
+    RecyclerView mRecyclerView;
+    boolean touch = false;
+
     String[] PERMISSIONS = {
             android.Manifest.permission.CAMERA,
             android.Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -258,17 +262,6 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
         this.finish();
     }
 
-    EnxPlayerView activePlayerView;
-
-    @Override
-    public void onActiveTalkerList(JSONObject jsonObject) {  // Depricated
-
-    }
-
-    RecyclerView mRecyclerView;
-
-    boolean touch = false;
-
     @Override
     public void onActiveTalkerList(RecyclerView recyclerView) {
 
@@ -442,6 +435,21 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
     }
 
     @Override
+    public void onAckPinUsers(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onAckUnpinUsers(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onPinnedUsers(JSONObject jsonObject) {
+
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.disconnect:
@@ -449,11 +457,6 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
                     if (enxPlayerView != null) {
                         enxPlayerView.release();
                         enxPlayerView = null;
-                    }
-
-                    if (activePlayerView != null) {
-                        activePlayerView.release();
-                        activePlayerView = null;
                     }
                     enxRooms.disconnect();
                 } else {
@@ -591,24 +594,24 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
     public JSONObject getReconnectInfo() {
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("allow_reconnect",true);
-            jsonObject.put("number_of_attempts",3);
-            jsonObject.put("timeout_interval",15);
-            jsonObject.put("activeviews","view");//view
+            jsonObject.put("allow_reconnect", true);
+            jsonObject.put("number_of_attempts", 3);
+            jsonObject.put("timeout_interval", 15);
+            jsonObject.put("activeviews", "view");//view
 
             JSONObject object = new JSONObject();
-            object.put("audiomute",true);
-            object.put("videomute",true);
-            object.put("bandwidth",true);
-            object.put("screenshot",true);
-            object.put("avatar",true);
+            object.put("audiomute", true);
+            object.put("videomute", true);
+            object.put("bandwidth", true);
+            object.put("screenshot", true);
+            object.put("avatar", true);
 
             object.put("iconColor", getResources().getColor(R.color.colorPrimary));
-            object.put("iconHeight",30);
-            object.put("iconWidth",30);
-            object.put("avatarHeight",200);
-            object.put("avatarWidth",200);
-            jsonObject.put("playerConfiguration",object);
+            object.put("iconHeight", 30);
+            object.put("iconWidth", 30);
+            object.put("avatarHeight", 200);
+            object.put("avatarWidth", 200);
+            jsonObject.put("playerConfiguration", object);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
-import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -81,7 +80,7 @@ public class WebCall extends AsyncTask<Void, Void, String> {
             httpURLConnection.setConnectTimeout(60000);
             httpURLConnection.setRequestMethod("GET");
 
-            if(WebConstants.kTry){
+            if (WebConstants.kTry) {
                 httpURLConnection.setRequestProperty("x-app-id", WebConstants.kAppId);
                 httpURLConnection.setRequestProperty("x-app-key", WebConstants.kAppkey);
             }
@@ -143,7 +142,7 @@ public class WebCall extends AsyncTask<Void, Void, String> {
             httpURLConnection.setDoInput(true);
             httpURLConnection.setDoOutput(true);
             httpURLConnection.setRequestProperty("Content-Type", "application/json");
-            if(WebConstants.kTry){
+            if (WebConstants.kTry) {
                 httpURLConnection.setRequestProperty("x-app-id", WebConstants.kAppId);
                 httpURLConnection.setRequestProperty("x-app-key", WebConstants.kAppkey);
             }
