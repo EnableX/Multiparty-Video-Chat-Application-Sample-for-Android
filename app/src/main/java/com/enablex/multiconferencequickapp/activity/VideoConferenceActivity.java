@@ -450,6 +450,46 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
     }
 
     @Override
+    public void onRoomAwaited(EnxRoom enxRoom, JSONObject jsonObject) {
+        
+    }
+
+    @Override
+    public void onUserAwaited(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onAckForApproveAwaitedUser(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onAckForDenyAwaitedUser(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onAckAddSpotlightUsers(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onAckRemoveSpotlightUsers(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onUpdateSpotlightUsers(JSONObject jsonObject) {
+
+    }
+
+    @Override
+    public void onRoomBandwidthAlert(JSONObject jsonObject) {
+
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.disconnect:
