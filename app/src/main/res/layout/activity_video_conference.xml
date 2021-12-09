@@ -76,39 +76,44 @@
 
                 <LinearLayout
                     android:id="@+id/ll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:layout_centerHorizontal="true">
 
                     <ImageView
                         android:id="@+id/mute"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="10dp"
+                        android:layout_width="@dimen/toolbar_icon_width"
+                        android:layout_height="@dimen/toolbar_icon_height"
+                        android:layout_weight="1"
                         android:tint="@color/white"
                         app:srcCompat="@drawable/unmute" />
 
                     <ImageView
                         android:id="@+id/video"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="10dp"
+                        android:layout_width="@dimen/toolbar_icon_width"
+                        android:layout_height="@dimen/toolbar_icon_height" android:layout_weight="1"
+
                         android:tint="@color/white"
                         app:srcCompat="@drawable/ic_videocam" />
 
                     <ImageView
                         android:id="@+id/camera"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="10dp"
+                        android:layout_width="@dimen/toolbar_icon_width"
+                        android:layout_height="@dimen/toolbar_icon_height"
+                        android:layout_weight="1"
+
                         android:tint="@color/white"
-                        app:srcCompat="@drawable/camera" />
+                        app:srcCompat="@drawable/front_camera" />
 
                     <ImageView
                         android:id="@+id/volume"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="10dp"
+                        android:layout_width="@dimen/toolbar_icon_width"
+                        android:layout_height="@dimen/toolbar_icon_height"
+                        android:layout_weight="1"
+
                         android:tint="@color/white"
                         app:srcCompat="@drawable/volume_on" />
                 </LinearLayout>

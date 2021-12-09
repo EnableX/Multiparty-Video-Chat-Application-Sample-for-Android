@@ -5,18 +5,50 @@
       <config />
     </shared>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0f0300c7-0b1f-45b8-847c-4da400948d22" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle___EnxRtcAndroid_release_2_0_1__aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle___EnxRtcAndroid_release_1_9_8__aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/enablex/multiconferencequickapp/activity/VideoConferenceActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/enablex/multiconferencequickapp/activity/VideoConferenceActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/enablex/multiconferencequickapp/web_communication/WebConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/enablex/multiconferencequickapp/web_communication/WebConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/libs/EnxRtcAndroid-release_1.9.8.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/mute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/unmute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/volume_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/volume_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_video_conference.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_video_conference.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +68,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="valueResourceFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -47,16 +86,22 @@
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="RQ30065QU3" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-26T09:18:43.098Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="D:/SDK/Sdk/Sdk" />
     <property name="device.picker.selection" value="1164159032" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/libs" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1627372371034" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1638978634548" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/libs" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="D:\Vcloudx_WorkSpace\GA1.4\Multiparty\Sample-Android-App-Multiparty-RTC\app\src\main\libs" />
     </key>
   </component>
@@ -197,30 +242,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="453" y="100" key="#com.intellij.ide.util.MemberChooser" timestamp="1627052919261">
-      <screen x="0" y="23" width="1280" height="729" />
-    </state>
-    <state x="453" y="100" key="#com.intellij.ide.util.MemberChooser/0.23.1280.729@0.23.1280.729" timestamp="1627052919261" />
-    <state x="409" y="153" key="AndroidProcessChooserDialog" timestamp="1627368378988">
+    <state x="165" y="139" key="#PSD" timestamp="1638978698456">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="409" y="153" key="AndroidProcessChooserDialog/0.0.1280.800@0.0.1280.800" timestamp="1627368378988" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1627368364492">
+    <state x="165" y="139" key="#PSD/0.0.1280.800@0.0.1280.800" timestamp="1638978698456" />
+    <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1638983900907">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1627368364492" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1627368364490">
+    <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1638983900907" />
+    <state x="462" y="198" key="AndroidCreateXmlResourceDialog" timestamp="1638985001874">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1627368364490" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1627368364489">
+    <state x="462" y="198" key="AndroidCreateXmlResourceDialog/0.0.1280.800@0.0.1280.800" timestamp="1638985001874" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1638979000647">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1627368364489" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1627368364491">
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1638979000647" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1638979000645">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1627368364491" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1638979000645" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1638979000644">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1638979000644" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1638979000646">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1638979000646" />
   </component>
   <component name="masterDetails">
     <states>

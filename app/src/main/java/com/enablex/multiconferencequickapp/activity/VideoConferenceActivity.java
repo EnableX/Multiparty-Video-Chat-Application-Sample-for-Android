@@ -68,7 +68,7 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
     Gson gson;
     EnxStream localStream;
     int PERMISSION_ALL = 1;
-
+    boolean isFrontCamera = true;
     List<HorizontalViewModel> list;
     private RecyclerView mHorizontalRecyclerView;
     private HorizontalViewAdapter horizontalAdapter;
@@ -522,8 +522,21 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
                 }
                 break;
             case R.id.camera:
-                localStream.switchCamera();
-                camera.setImageResource(R.drawable.camera);
+                if (localStream != null) {
+                    if (!isVideoMuted) {
+                        if (isFrontCamera) {
+                            localStream.switchCamera();
+                            camera.setImageResource(R.drawable.rear_camera);
+                            isFrontCamera = false;
+                        } else {
+                            localStream.switchCamera();
+                            camera.setImageResource(R.drawable.front_camera);
+                            isFrontCamera = true;
+                        }
+                    }else{
+                        Toast.makeText(VideoConferenceActivity.this,"Please turn on the video to switch camera.",Toast.LENGTH_LONG).show();
+                    }
+                }
                 break;
             case R.id.volume:
                 if (enxRooms != null) {
