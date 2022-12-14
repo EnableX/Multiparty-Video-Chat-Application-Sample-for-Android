@@ -722,19 +722,5 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
 
     }
 
-    @Override
-    public void onACKStartLiveTranscription(JSONObject jsonObject) {
-
-    }
-
-    @Override
-    public void onACKStopLiveTranscription(JSONObject jsonObject) {
-
-    }
-
-    @Override
-    public void onTranscriptionEvents(JSONObject jsonObject) {
-
-    }
 
 }
