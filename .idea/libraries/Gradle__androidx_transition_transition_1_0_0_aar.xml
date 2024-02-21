@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: androidx.transition:transition:1.0.0@aar">
+  <library name="Gradle: androidx.transition:transition:1.0.0@aar" external-system-id="GRADLE">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7118a91e2743b0803e4c688a99be8839/transformed/transition-1.0.0/annotations.zip!/" />
     </ANNOTATIONS>

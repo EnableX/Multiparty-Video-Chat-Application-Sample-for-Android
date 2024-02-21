@@ -29,8 +29,8 @@
     <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Multiparty-Video-Chat-Application-Sample-for-Android.app.main" scope="TEST" />
+    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/EnxRtcAndroid-release_2.3.14.aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/libwebrtc.aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/EnxRtcAndroid-release_2.3.3.aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.ext:junit:1.1.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-core:3.1.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:runner:1.1.0@aar" level="project" />

@@ -24,8 +24,8 @@
     <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Multiparty-Video-Chat-Application-Sample-for-Android.app.main" scope="TEST" />
+    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/EnxRtcAndroid-release_2.3.14.aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/libwebrtc.aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/EnxRtcAndroid-release_2.3.3.aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.material:material:1.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.appcompat:appcompat:1.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.vectordrawable:vectordrawable-animated:1.0.0@aar" level="project" />

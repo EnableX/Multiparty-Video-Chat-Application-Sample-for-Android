@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.0.0@aar">
+  <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.0.0@aar" external-system-id="GRADLE">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a01b5c44b5b15289293536108392bcae/transformed/lifecycle-viewmodel-2.0.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a01b5c44b5b15289293536108392bcae/transformed/lifecycle-viewmodel-2.0.0/jars/classes.jar!/" />

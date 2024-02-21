@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: ./app/libs/libwebrtc.aar">
+  <library name="Gradle: ./app/libs/libwebrtc.aar" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9f78cbbc3f6c5084056cc59ef93530d1/transformed/jetified-libwebrtc/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9f78cbbc3f6c5084056cc59ef93530d1/transformed/jetified-libwebrtc/AndroidManifest.xml" />
