@@ -2,7 +2,7 @@
 
 Multi-Party RTC: A Sample Android App with EnableX Android Toolkit
 
-This is a Sample Android App that demonstrates the use of EnableX platform Video APIs (https://www.enablex.io/developer/video-api/server-api) and Android Toolkit (https://www.enablex.io/developer/video-api/client-api/android-toolkit/) to build Multi-Party RTC (Real Time Communication) Application. It allows developers to ramp up on app development by hosting on their own devices.
+This is a Sample Android App that demonstrates the use of EnableX platform Video APIs (https://developer.enablex.io/docs/references/apis/video-api/index/) and Android Toolkit (https://developer.enablex.io/docs/references/sdks/video-sdk/android-sdk/index/) to build Multi-Party RTC (Real Time Communication) Application. It allows developers to ramp up on app development by hosting on their own devices.
 
 This App creates a virtual Room on the fly hosted on the Enablex platform using REST calls and uses the Room credentials (i.e. Room Id) to connect to the virtual Room as a mobile client. The same Room credentials can be shared with others to join the same virtual Room to carry out an RTC session.
 
@@ -82,15 +82,15 @@ Note the following:
 * Application Server is created using EnableX Server API, a Rest API Service helps in provisioning, session access and post-session reporting.  
 
 To know more about Server API, go to:
-https://www.enablex.io/developer/video-api/server-api
+https://developer.enablex.io/docs/references/apis/video-api/index/
 
 
 ## 3 Android Toolkit
 
 This Sample Application uses EnableX Android Toolkit to communicate with EnableX Servers to initiate and manage Real Time Communications. Please update your Application with latest version of EnableX Android Toolkit as and when a new release is available.   
 
-* Documentation: https://www.enablex.io/developer/video-api/client-api/android-toolkit/
-* Download Toolkit: https://www.enablex.io/developer/video-api/client-api/android-toolkit/
+* Documentation: https://developer.enablex.io/docs/references/sdks/video-sdk/android-sdk/index/
+* Download Toolkit: https://developer.enablex.io/docs/references/sdks/video-sdk/android-sdk/index/
 
 
 ## 4 Trial
