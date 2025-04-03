@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: io.socket:socket.io-client:2.1.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.socket" artifactId="socket.io-client" version="2.1.1" baseVersion="2.1.1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.socket/socket.io-client/2.1.1/e73a2d56b4bad20ec7a32fce9acb5dfdc907f3b4/socket.io-client-2.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.socket/socket.io-client/2.1.1/4f4961a27ead1d440c119c9061e74a7abb0edf3e/socket.io-client-2.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.socket/socket.io-client/2.1.1/76b4a8a508674d4915974cd8dcd7ace470edbefc/socket.io-client-2.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

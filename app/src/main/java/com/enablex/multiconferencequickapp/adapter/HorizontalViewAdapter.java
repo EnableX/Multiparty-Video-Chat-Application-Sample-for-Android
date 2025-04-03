@@ -10,8 +10,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.enablex.multiconferencequickapp.R;
 import com.enablex.multiconferencequickapp.model.HorizontalViewModel;
+import com.enablex.multipartyquickapp.R;
 
 import java.util.List;
 

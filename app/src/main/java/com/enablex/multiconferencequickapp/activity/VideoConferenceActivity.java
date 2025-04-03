@@ -27,11 +27,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.enablex.multiconferencequickapp.R;
 import com.enablex.multiconferencequickapp.adapter.HorizontalViewAdapter;
 import com.enablex.multiconferencequickapp.model.HorizontalViewModel;
 import com.enablex.multiconferencequickapp.model.UserModel;
 import com.enablex.multiconferencequickapp.utilities.OnDragTouchListener;
+import com.enablex.multipartyquickapp.R;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -492,8 +492,8 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.disconnect:
+        int id =view.getId();
+            if(id== R.id.disconnect) {
                 if (enxRooms != null) {
                     if (enxPlayerView != null) {
                         enxPlayerView.release();
@@ -503,8 +503,8 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
                 } else {
                     finish();
                 }
-                break;
-            case R.id.mute:
+            }
+            else if(id== R.id.mute) {
                 if (localStream != null) {
                     if (!isAudioMuted) {
                         localStream.muteSelfAudio(true);
@@ -512,8 +512,8 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
                         localStream.muteSelfAudio(false);
                     }
                 }
-                break;
-            case R.id.video:
+            }
+            else if(id== R.id.video) {
                 if (localStream != null) {
                     if (!isVideoMuted) {
                         localStream.muteSelfVideo(true);
@@ -521,8 +521,8 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
                         localStream.muteSelfVideo(false);
                     }
                 }
-                break;
-            case R.id.camera:
+            }
+            else if(id== R.id.camera) {
                 if (localStream != null) {
                     if (!isVideoMuted) {
                         if (isFrontCamera) {
@@ -534,16 +534,16 @@ public class VideoConferenceActivity extends AppCompatActivity implements EnxRoo
                             camera.setImageResource(R.drawable.front_camera);
                             isFrontCamera = true;
                         }
-                    }else{
-                        Toast.makeText(VideoConferenceActivity.this,"Please turn on the video to switch camera.",Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(VideoConferenceActivity.this, "Please turn on the video to switch camera.", Toast.LENGTH_LONG).show();
                     }
                 }
-                break;
-            case R.id.volume:
+            }
+            else if(id== R.id.volume){
                 if (enxRooms != null) {
                     showRadioButtonDialog();
                 }
-                break;
+
         }
     }
 
